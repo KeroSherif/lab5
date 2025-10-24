@@ -7,6 +7,8 @@
  *
  * @author Kirolos sherif
  */
+/**
+ */
 import java.io.*;
 import java.util.*;
 
@@ -113,8 +115,8 @@ public class StudentManager {
                         String dept = parts[4];
                         double gpa = Double.parseDouble(parts[5]);
 
-                        // نستخدم constructor مباشرة (بدون validation مكرر)
-                        Student s = new Student(id, name, age, gender, dept, gpa);
+                        // ✅ التعديل الوحيد: استخدام الـconstructor الآمن للتحميل
+                        Student s = new Student(id, name, age, gender, dept, gpa, true);
                         students.add(s);
                     } catch (Exception e) {
                         // تجاهل السطر لو فيه بيانات فاسدة
