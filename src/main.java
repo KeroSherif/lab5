@@ -9,7 +9,7 @@
  */
 /**
  * Test class for the Student Management System Backend.
- * This class is for testing only — not part of the final GUI submission.
+
  */
 public class main {
     public static void main(String[] args) {
