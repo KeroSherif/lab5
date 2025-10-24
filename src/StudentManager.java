@@ -5,7 +5,7 @@
 
 /**
  *
- * @author marina sherif
+ * @author Kirolos sherif
  */
 import java.io.*;
 import java.util.*;
