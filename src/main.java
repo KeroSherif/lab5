@@ -5,7 +5,7 @@
 
 /**
  *
- * @author marina sherif
+ * @author Kirolos sherif
  */
 /**
  * Test class for the Student Management System Backend.
