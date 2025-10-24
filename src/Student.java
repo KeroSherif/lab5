@@ -9,39 +9,34 @@
  *
  * @author marina sherif
  */
-public class Student {
+/**
+ * Represents a student in the system.
+ * Inherits from Person to demonstrate OOP Inheritance.
+ */
+public class Student extends Person {
     private int id;
-    private String fullName;
-    private int age;
-    private String gender; // "Male" or "Female"
     private String department;
     private double gpa;
 
-    // Constructor
+    // Constructor for user input (with validation via setters)
     public Student(int id, String fullName, int age, String gender, String department, double gpa) {
+        super(fullName, age, gender); // Pass common data to Person
         setId(id);
-        setFullName(fullName);
-        setAge(age);
-        setGender(gender);
         setDepartment(department);
         setGpa(gpa);
+    }
+
+    // Constructor for loading from file (trusted data, no validation)
+    public Student(int id, String fullName, int age, String gender, String department, double gpa, boolean trusted) {
+        super(fullName, age, gender); // Still required when inheriting
+        this.id = id;
+        this.department = department;
+        this.gpa = gpa;
     }
 
     // Getters
     public int getId() {
         return id;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getGender() {
-        return gender;
     }
 
     public String getDepartment() {
@@ -60,27 +55,6 @@ public class Student {
         this.id = id;
     }
 
-    public void setFullName(String fullName) {
-        if (fullName == null || fullName.trim().isEmpty()) {
-            throw new IllegalArgumentException("Full name cannot be empty.");
-        }
-        this.fullName = fullName.trim();
-    }
-
-    public void setAge(int age) {
-        if (age < 16 || age > 100) {
-            throw new IllegalArgumentException("Age must be between 16 and 100.");
-        }
-        this.age = age;
-    }
-
-    public void setGender(String gender) {
-        if (!"Male".equalsIgnoreCase(gender) && !"Female".equalsIgnoreCase(gender)) {
-            throw new IllegalArgumentException("Gender must be 'Male' or 'Female'.");
-        }
-        this.gender = gender.substring(0, 1).toUpperCase() + gender.substring(1).toLowerCase();
-    }
-
     public void setDepartment(String department) {
         if (department == null || department.trim().isEmpty()) {
             throw new IllegalArgumentException("Department cannot be empty.");
@@ -95,7 +69,6 @@ public class Student {
         this.gpa = gpa;
     }
 
-    // Optional: toString for debugging or display
     @Override
     public String toString() {
         return "Student{" +
