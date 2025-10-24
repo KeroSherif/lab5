@@ -7,7 +7,7 @@
  *
  /**
  *
- * @author marina sherif
+ * @author Kirolos sherif
  */
 /**
  * Represents a student in the system.
