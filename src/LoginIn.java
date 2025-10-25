@@ -11,4 +11,11 @@ public class LoginPanel extends JPanel {
     private JPasswordField passwordField;
     private MainApp mainApp;
 
-   
+    public LoginPanel(MainApp mainApp) {
+        this.mainApp = mainApp;
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(10, 10, 10, 10);
+
+        JLabel title = new JLabel("Login to Student Management System");
+        title.setFont(new Font("Arial", Font.BOLD, 18));
