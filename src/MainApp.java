@@ -21,3 +21,6 @@ public MainApp() {
 
         cardLayout = new CardLayout();
         mainPanel = new JPanel(cardLayout);
+        
+        LoginPanel loginPanel = new LoginPanel(this);
+        HomePanel homePanel = new HomePanel(this);
