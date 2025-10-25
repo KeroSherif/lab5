@@ -24,3 +24,11 @@ public MainApp() {
         
         LoginPanel loginPanel = new LoginPanel(this);
         HomePanel homePanel = new HomePanel(this);
+        
+        mainPanel.add(loginPanel, "Login");
+        mainPanel.add(homePanel, "Home");
+
+        add(mainPanel);
+        cardLayout.show(mainPanel, "Login");
+    }
+
