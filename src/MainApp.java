@@ -32,3 +32,12 @@ public MainApp() {
         cardLayout.show(mainPanel, "Login");
     }
 
+ public void showPanel(String name) {
+        cardLayout.show(mainPanel, name);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new MainApp().setVisible(true));
+    }
+}
+
