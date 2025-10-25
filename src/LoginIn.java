@@ -25,3 +25,17 @@ public class LoginPanel extends JPanel {
         usernameField = new JTextField(15);
         passwordField = new JPasswordField(15);
         JButton loginBtn = new JButton("Login");
+        
+    loginBtn.addActionListener(e -> {
+            String username = usernameField.getText();
+            String password = new String(passwordField.getPassword());
+
+            if (username.isEmpty() || password.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Please enter both username and password!");
+            } else if (username.equals("admin") && password.equals("1234")) {
+                JOptionPane.showMessageDialog(this, "Login successful!");
+                mainApp.showPanel("Home");
+            } else {
+                JOptionPane.showMessageDialog(this, "Invalid credentials!");
+            }
+        });
