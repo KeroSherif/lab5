@@ -12,3 +12,12 @@ import java.awt.*;
 public class MainApp extends JFrame {
     private CardLayout cardLayout;
     private JPanel mainPanel;
+
+public MainApp() {
+        setTitle("Student Management System");
+        setSize(700, 500);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        cardLayout = new CardLayout();
+        mainPanel = new JPanel(cardLayout);
