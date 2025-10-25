@@ -31,3 +31,13 @@ public class HomePanel extends JPanel {
         updateBtn.addActionListener(e -> JOptionPane.showMessageDialog(this, "Go to Update Student Page"));
         deleteBtn.addActionListener(e -> JOptionPane.showMessageDialog(this, "Go to Delete Student Page"));
         logoutBtn.addActionListener(e -> mainApp.showPanel("Login"));
+        
+        btnPanel.add(addBtn);
+        btnPanel.add(viewBtn);
+        btnPanel.add(updateBtn);
+        btnPanel.add(deleteBtn);
+        btnPanel.add(logoutBtn);
+
+        add(btnPanel, BorderLayout.CENTER);
+    }
+}
