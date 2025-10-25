@@ -27,7 +27,7 @@ public class HomePanel extends JPanel {
         JButton deleteBtn = new JButton("Delete Student");
         JButton logoutBtn = new JButton("Logout");
 
-        // Navigation Buttons (can be linked to real panels later)
+        
         addBtn.addActionListener(e -> JOptionPane.showMessageDialog(this, "Go to Add Student Page"));
         viewBtn.addActionListener(e -> JOptionPane.showMessageDialog(this, "Go to View Students Page"));
         updateBtn.addActionListener(e -> JOptionPane.showMessageDialog(this, "Go to Update Student Page"));
