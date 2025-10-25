@@ -2,7 +2,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package lab5;
 import javax.swing.*;
 import java.awt.*;
 
@@ -39,3 +38,20 @@ public class LoginPanel extends JPanel {
                 JOptionPane.showMessageDialog(this, "Invalid credentials!");
             }
         });
+    
+            gbc.gridx = 0; gbc.gridy = 0; gbc.gridwidth = 2;
+        add(title, gbc);
+        gbc.gridwidth = 1;
+        gbc.gridy++;
+        add(userLabel, gbc);
+        gbc.gridx = 1;
+        add(usernameField, gbc);
+        gbc.gridx = 0; gbc.gridy++;
+        add(passLabel, gbc);
+        gbc.gridx = 1;
+        add(passwordField, gbc);
+        gbc.gridx = 0; gbc.gridy++;
+        gbc.gridwidth = 2;
+        add(loginBtn, gbc);
+    }
+}
