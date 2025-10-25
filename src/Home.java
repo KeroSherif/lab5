@@ -15,4 +15,13 @@ public class HomePanel extends JPanel {
         this.mainApp = mainApp;
         setLayout(new BorderLayout());
 
-       
+       JLabel title = new JLabel("Welcome to the Student Management System", SwingConstants.CENTER);
+        title.setFont(new Font("Arial", Font.BOLD, 18));
+        add(title, BorderLayout.NORTH);
+
+        JPanel btnPanel = new JPanel(new GridLayout(5, 1, 10, 10));
+        JButton addBtn = new JButton("Add Student");
+        JButton viewBtn = new JButton("View Students");
+        JButton updateBtn = new JButton("Update Student");
+        JButton deleteBtn = new JButton("Delete Student");
+        JButton logoutBtn = new JButton("Logout");
