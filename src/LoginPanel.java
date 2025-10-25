@@ -5,6 +5,10 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ *
+ * @author DANAH
+ */
 public class LoginPanel extends JPanel {
     private JTextField usernameField;
     private JPasswordField passwordField;
@@ -19,13 +23,13 @@ public class LoginPanel extends JPanel {
         JLabel title = new JLabel("Login to Student Management System");
         title.setFont(new Font("Arial", Font.BOLD, 18));
         
-        JLabel userLabel = new JLabel("Username:");
+       JLabel userLabel = new JLabel("Username:");
         JLabel passLabel = new JLabel("Password:");
         usernameField = new JTextField(15);
         passwordField = new JPasswordField(15);
         JButton loginBtn = new JButton("Login");
-        
-    loginBtn.addActionListener(e -> {
+
+         loginBtn.addActionListener(e -> {
             String username = usernameField.getText();
             String password = new String(passwordField.getPassword());
 
@@ -38,8 +42,8 @@ public class LoginPanel extends JPanel {
                 JOptionPane.showMessageDialog(this, "Invalid credentials!");
             }
         });
-    
-            gbc.gridx = 0; gbc.gridy = 0; gbc.gridwidth = 2;
+
+        gbc.gridx = 0; gbc.gridy = 0; gbc.gridwidth = 2;
         add(title, gbc);
         gbc.gridwidth = 1;
         gbc.gridy++;
@@ -54,4 +58,4 @@ public class LoginPanel extends JPanel {
         gbc.gridwidth = 2;
         add(loginBtn, gbc);
     }
-}
+} 
