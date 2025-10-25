@@ -4,6 +4,7 @@
  */
 import javax.swing.*;
 import java.awt.*;
+
 /**
  *
  * @author DANAH
@@ -15,7 +16,7 @@ public class HomePanel extends JPanel {
         this.mainApp = mainApp;
         setLayout(new BorderLayout());
 
-       JLabel title = new JLabel("Welcome to the Student Management System", SwingConstants.CENTER);
+        JLabel title = new JLabel("Welcome to the Student Management System", SwingConstants.CENTER);
         title.setFont(new Font("Arial", Font.BOLD, 18));
         add(title, BorderLayout.NORTH);
 
@@ -25,13 +26,14 @@ public class HomePanel extends JPanel {
         JButton updateBtn = new JButton("Update Student");
         JButton deleteBtn = new JButton("Delete Student");
         JButton logoutBtn = new JButton("Logout");
-        
-    addBtn.addActionListener(e -> JOptionPane.showMessageDialog(this, "Go to Add Student Page"));
+
+        // Navigation Buttons (can be linked to real panels later)
+        addBtn.addActionListener(e -> JOptionPane.showMessageDialog(this, "Go to Add Student Page"));
         viewBtn.addActionListener(e -> JOptionPane.showMessageDialog(this, "Go to View Students Page"));
         updateBtn.addActionListener(e -> JOptionPane.showMessageDialog(this, "Go to Update Student Page"));
         deleteBtn.addActionListener(e -> JOptionPane.showMessageDialog(this, "Go to Delete Student Page"));
         logoutBtn.addActionListener(e -> mainApp.showPanel("Login"));
-        
+
         btnPanel.add(addBtn);
         btnPanel.add(viewBtn);
         btnPanel.add(updateBtn);
