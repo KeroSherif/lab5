@@ -48,7 +48,7 @@ public class SearchStudentPanel extends JPanel {
         }
 
         try {
-            // لو المستخدم كتب رقم --> ابحث بـ ID
+            
             int id = Integer.parseInt(query);
             Student s = manager.getStudentById(id);
             if (s != null) {
@@ -57,7 +57,6 @@ public class SearchStudentPanel extends JPanel {
                 JOptionPane.showMessageDialog(this, "No student found with that ID.");
             }
         } catch (NumberFormatException e) {
-            // لو مش رقم --> ابحث بالاسم
             List<Student> list = manager.searchStudentsByName(query);
             if (list.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "No students found.");

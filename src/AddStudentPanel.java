@@ -48,7 +48,7 @@ public class AddStudentPanel extends JPanel {
         JButton btnClear = new JButton("Clear");
         add(btnClear);
 
-        // Action for Add button
+        
         btnAdd.addActionListener(e -> {
             try {
                 String name = txtName.getText().trim();
@@ -81,3 +81,19 @@ public class AddStudentPanel extends JPanel {
         comboGender.setSelectedIndex(0);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
