@@ -53,6 +53,6 @@ public class ViewStudentPanel extends JPanel {
                 s.getDepartment(),
                 s.getGpa()
             });
-        }
-    }
+        }
+    }
 }
