@@ -28,7 +28,7 @@ public class HomePanel extends JPanel {
         btnPanel.setBorder(BorderFactory.createEmptyBorder(40, 70, 40, 70));
         btnPanel.setBackground(new Color(18, 18, 18));
         
- JButton addBtn = createStyledButton(" Add Student", new Color(76, 175, 80));
+        JButton addBtn = createStyledButton(" Add Student", new Color(76, 175, 80));
         JButton viewBtn = createStyledButton(" View Students", new Color(33, 150, 243));
         JButton updateBtn = createStyledButton(" Update Student", new Color(255, 152, 0));
         JButton searchBtn = createStyledButton(" Search Student", new Color(156, 39, 176));
@@ -47,7 +47,7 @@ public class HomePanel extends JPanel {
             }
         });
 
-btnPanel.add(addBtn);
+        btnPanel.add(addBtn);
         btnPanel.add(viewBtn);
         btnPanel.add(updateBtn);
         btnPanel.add(searchBtn);
