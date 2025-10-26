@@ -5,6 +5,7 @@
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.text.JTextComponent;
+
 /**
  *
  * @author DANAH
@@ -28,7 +29,7 @@ public class LoginPanel extends JPanel {
         gbc.gridx = 0; gbc.gridy = 0; gbc.gridwidth = 2;
         add(title, gbc);
 
-JLabel subtitle = new JLabel("Sign in to continue", SwingConstants.CENTER);
+ JLabel subtitle = new JLabel("Sign in to continue", SwingConstants.CENTER);
         subtitle.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         subtitle.setForeground(new Color(176, 176, 176));
         gbc.gridy++;
@@ -48,14 +49,14 @@ JLabel subtitle = new JLabel("Sign in to continue", SwingConstants.CENTER);
         gbc.gridx = 1;
         add(usernameField, gbc);
 
-gbc.gridy++;
+        gbc.gridy++;
         JLabel passLabel = new JLabel("Password:");
         passLabel.setFont(new Font("Segoe UI", Font.PLAIN, 15));
         passLabel.setForeground(Color.WHITE);
         gbc.gridx = 0;
         add(passLabel, gbc);
 
-        passwordField = new JPasswordField(18);
+passwordField = new JPasswordField(18);
         styleTextField(passwordField);
         gbc.gridx = 1;
         add(passwordField, gbc);
@@ -69,11 +70,11 @@ gbc.gridy++;
         add(loginBtn, gbc);
     }
 
-private void handleLogin() {
+    private void handleLogin() {
         String username = usernameField.getText().trim();
         String password = new String(passwordField.getPassword()).trim();
 
-        if (username.isEmpty() || password.isEmpty()) {
+  if (username.isEmpty() || password.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please enter both username and password!", "Missing Fields", JOptionPane.WARNING_MESSAGE);
         } else if ("admin".equals(username) && "1234".equals(password)) {
             JOptionPane.showMessageDialog(this, "Login successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
@@ -83,7 +84,7 @@ private void handleLogin() {
         }
     }
 
- private void styleTextField(JTextComponent field) {
+    private void styleTextField(JTextComponent field) {
         field.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         field.setForeground(Color.WHITE);
         field.setBackground(new Color(30, 30, 30));
@@ -94,7 +95,7 @@ private void handleLogin() {
         ));
     }
 
-    private void styleButton(JButton btn, Color bg, Color fg) {
+ private void styleButton(JButton btn, Color bg, Color fg) {
         btn.setBackground(bg);
         btn.setForeground(fg);
         btn.setBorderPainted(false);
