@@ -1,16 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 import javax.swing.*;
-import java.awt.*;
-
-/**
- *
- * @author DANAH
- */
-
-
 
 public class MainApp extends JFrame {
     private CardLayout cardLayout;
@@ -25,37 +13,19 @@ public class MainApp extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // ✅ إضافة شريط القوائم
-        setupMenuBar();
-
         cardLayout = new CardLayout();
         mainPanel = new JPanel(cardLayout);
 
         mainPanel.add(new LoginPanel(this), "Login");
         mainPanel.add(new HomePanel(this), "Home");
-        mainPanel.add(new AddStudentPanel(manager), "AddStudent");
+        mainPanel.add(new AddStudentPanel(this, manager), "AddStudent");
         mainPanel.add(new ViewStudentPanel(manager), "View");
-        mainPanel.add(new UpdateStudentPanel(manager), "UpdateStudent");
-        mainPanel.add(new DeleteStudent(manager), "DeleteStudent");
-        mainPanel.add(new SearchStudentPanel(manager), "SearchStudent");
+        mainPanel.add(new UpdateStudentPanel(this, manager), "UpdateStudent");
+        mainPanel.add(new DeleteStudent(this, manager), "DeleteStudent"); 
+        mainPanel.add(new SearchStudentPanel(this, manager), "SearchStudent");
 
         add(mainPanel);
         cardLayout.show(mainPanel, "Login");
-    }
-
-    // ✅ دالة لإنشاء شريط القوائم
-    private void setupMenuBar() {
-        JMenuBar menuBar = new JMenuBar();
-        JMenu navigationMenu = new JMenu("Navigation");
-        navigationMenu.setMnemonic('N'); // اختصار Alt+N
-
-        JMenuItem homeItem = new JMenuItem("Home");
-        homeItem.setMnemonic('H'); // Alt+H
-        homeItem.addActionListener(e -> showPanel("Home"));
-
-        navigationMenu.add(homeItem);
-        menuBar.add(navigationMenu);
-        setJMenuBar(menuBar);
     }
 
     public void showPanel(String name) {
@@ -64,5 +34,5 @@ public class MainApp extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new MainApp().setVisible(true));
-    }
+    }
 }
