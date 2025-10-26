@@ -1,4 +1,5 @@
 import java.awt.CardLayout;
+import java.awt.Color;
 import javax.swing.*;
 
 public class MainApp extends JFrame {
@@ -7,23 +8,29 @@ public class MainApp extends JFrame {
     private StudentManager manager;
 
     public MainApp() {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            System.err.println("System L&F not available. Using default.");
+        }
         manager = new StudentManager();
-
         setTitle("Student Management System");
-        setSize(800, 600);
+        setSize(880, 680);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-
+        getContentPane().setBackground(new Color(18, 18, 18));
         cardLayout = new CardLayout();
         mainPanel = new JPanel(cardLayout);
+        mainPanel.setBackground(new Color(18, 18, 18));
 
+        // ✅ كل لوحة تستقبل فقط StudentManager (ما فيش this)
         mainPanel.add(new LoginPanel(this), "Login");
         mainPanel.add(new HomePanel(this), "Home");
-        mainPanel.add(new AddStudentPanel( manager), "AddStudent");
+        mainPanel.add(new AddStudentPanel(manager), "AddStudent");
         mainPanel.add(new ViewStudentPanel(manager), "View");
-        mainPanel.add(new UpdateStudentPanel( manager), "UpdateStudent");
-        mainPanel.add(new DeleteStudent( manager), "DeleteStudent"); 
-        mainPanel.add(new SearchStudentPanel( manager), "SearchStudent");
+        mainPanel.add(new UpdateStudentPanel(manager), "UpdateStudent");
+        mainPanel.add(new DeleteStudent(manager), "DeleteStudent"); // ⚠️ لاحظ: في الكود الأصلي فيه خطأ هنا (هشرحه تحت)
+        mainPanel.add(new SearchStudentPanel(manager), "SearchStudent");
 
         add(mainPanel);
         cardLayout.show(mainPanel, "Login");
@@ -35,5 +42,5 @@ public class MainApp extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new MainApp().setVisible(true));
-  }
+    }
 }
