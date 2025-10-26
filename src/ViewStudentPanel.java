@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
@@ -116,6 +115,6 @@ public class ViewStudentPanel extends JPanel {
                 s.getDepartment(),
                 s.getGpa()
             });
-        }
-    }
+      }
+    }
 }
