@@ -1,6 +1,14 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ *
+ * @author DANAH
+ */
 public class HomePanel extends JPanel {
     private MainApp mainApp;
 
@@ -26,6 +34,7 @@ public class HomePanel extends JPanel {
         JButton updateBtn = createStyledButton("️ Update Student", new Color(255, 152, 0));
         JButton searchBtn = createStyledButton(" Search Student", new Color(156, 39, 176));
         JButton deleteBtn = createStyledButton("️ Delete Student", new Color(244, 67, 54));
+
         JButton logoutBtn = createStyledButton(" Logout", new Color(120, 120, 120));
 
         addBtn.addActionListener(e -> mainApp.showPanel("AddStudent"));
@@ -60,6 +69,8 @@ public class HomePanel extends JPanel {
         btn.setOpaque(true);
         btn.setPreferredSize(new Dimension(220, 58));
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         return btn;
     }
 }
+
