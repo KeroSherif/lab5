@@ -1,3 +1,4 @@
+import java.awt.CardLayout;
 import javax.swing.*;
 
 public class MainApp extends JFrame {
@@ -18,11 +19,11 @@ public class MainApp extends JFrame {
 
         mainPanel.add(new LoginPanel(this), "Login");
         mainPanel.add(new HomePanel(this), "Home");
-        mainPanel.add(new AddStudentPanel(this, manager), "AddStudent");
+        mainPanel.add(new AddStudentPanel( manager), "AddStudent");
         mainPanel.add(new ViewStudentPanel(manager), "View");
-        mainPanel.add(new UpdateStudentPanel(this, manager), "UpdateStudent");
-        mainPanel.add(new DeleteStudent(this, manager), "DeleteStudent"); 
-        mainPanel.add(new SearchStudentPanel(this, manager), "SearchStudent");
+        mainPanel.add(new UpdateStudentPanel( manager), "UpdateStudent");
+        mainPanel.add(new DeleteStudent( manager), "DeleteStudent"); 
+        mainPanel.add(new SearchStudentPanel( manager), "SearchStudent");
 
         add(mainPanel);
         cardLayout.show(mainPanel, "Login");
@@ -34,5 +35,5 @@ public class MainApp extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new MainApp().setVisible(true));
-    }
+  }
 }
