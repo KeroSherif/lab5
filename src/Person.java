@@ -23,7 +23,7 @@ public class Person {
         setGender(gender);
     }
 
-    // Getters
+   
     public String getFullName() {
         return fullName;
     }
@@ -36,7 +36,7 @@ public class Person {
         return gender;
     }
 
-    // Setters with validation
+   
     public void setFullName(String fullName) {
         if (fullName == null || fullName.trim().isEmpty()) {
             throw new IllegalArgumentException("Full name cannot be empty.");
