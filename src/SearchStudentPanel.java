@@ -69,23 +69,3 @@ public class SearchStudentPanel extends JPanel {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
