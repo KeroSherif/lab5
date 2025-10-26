@@ -5,7 +5,8 @@ import java.util.List;
 public class DeleteStudent extends javax.swing.JPanel {
     private StudentManager manager;
     private MainApp mainApp;
-    private DefaultTableModel tableModel; 
+    private DefaultTableModel tableModel;
+
     public DeleteStudent(MainApp mainApp, StudentManager manager) {
         this.mainApp = mainApp;
         this.manager = manager;
@@ -18,7 +19,7 @@ public class DeleteStudent extends javax.swing.JPanel {
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
 
-      tableModel = new DefaultTableModel(
+        tableModel = new DefaultTableModel(
             new Object[][]{},
             new String[]{"ID", "Name", "Age", "Gender", "Department", "GPA"}
         ) {
@@ -84,7 +85,7 @@ public class DeleteStudent extends javax.swing.JPanel {
     }
 
     private void deleteStudent() {
-        int selectedRow = jTable1.getSelectedRow();
+        int selectedRow = jTable1.getSelectedRow(); 
         if (selectedRow == -1) {
             JOptionPane.showMessageDialog(this, "Please select a student from the table first.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
@@ -105,6 +106,10 @@ public class DeleteStudent extends javax.swing.JPanel {
             } else {
                 JOptionPane.showMessageDialog(this, "Error: Student could not be deleted.", "Error", JOptionPane.ERROR_MESSAGE);
             }
-        }
-    }
+        }
+    }
+
+    private javax.swing.JButton jButton1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
 }
