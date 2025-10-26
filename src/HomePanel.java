@@ -32,13 +32,12 @@ public class HomePanel extends JPanel {
         addBtn.addActionListener(e -> mainApp.showPanel("AddStudent"));
         viewBtn.addActionListener(e -> mainApp.showPanel("View"));
         updateBtn.addActionListener(e -> mainApp.showPanel("UpdateStudent"));
+        
         searchBtn.addActionListener(e -> mainApp.showPanel("SearchStudent"));
 
         // لو مش هتعمل Delete Panel، اخلي زر الحذف يوجه لـSearch (عشان يقدر يدور ويحذف من هناك)
         // أو اخليه يظهر رسالة إن الحذف متاح من لوحة البحث
-        deleteBtn.addActionListener(e -> {
-            JOptionPane.showMessageDialog(this, "Use Search to find and delete a student.");
-            mainApp.showPanel("SearchStudent");
+        deleteBtn.addActionListener(e -> mainApp.shoPanel("DeleteStudent"));
         });
 
         logoutBtn.addActionListener(e -> mainApp.showPanel("Login"));
