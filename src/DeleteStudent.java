@@ -182,6 +182,6 @@ public class DeleteStudent extends javax.swing.JPanel {
             } else {
                 JOptionPane.showMessageDialog(this, "Error: Student could not be deleted.", "Error", JOptionPane.ERROR_MESSAGE);
             }
-        }
-    }
+       }
+    }
 }
