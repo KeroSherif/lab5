@@ -7,7 +7,7 @@ public class DeleteStudent extends javax.swing.JPanel {
     private MainApp mainApp;
     private DefaultTableModel tableModel;
 
-    public DeleteStudent(MainApp mainApp, StudentManager manager) {
+    public DeleteStudent(StudentManager manager) {
         this.mainApp = mainApp;
         this.manager = manager;
         initComponents();
