@@ -32,8 +32,7 @@ public class LoginPanel extends JPanel {
         gbc.gridx = 0; gbc.gridy = 0; gbc.gridwidth = 2;
         add(title, gbc);
 
-
- JLabel subtitle = new JLabel("Sign in to continue", SwingConstants.CENTER);
+        JLabel subtitle = new JLabel("Sign in to continue", SwingConstants.CENTER);
         subtitle.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         subtitle.setForeground(new Color(176, 176, 176));
         gbc.gridy++;
@@ -59,6 +58,7 @@ public class LoginPanel extends JPanel {
         passLabel.setForeground(Color.WHITE);
         gbc.gridx = 0;
         add(passLabel, gbc);
+
         passwordField = new JPasswordField(18);
         styleTextField(passwordField);
         gbc.gridx = 1;
@@ -76,7 +76,6 @@ public class LoginPanel extends JPanel {
     private void handleLogin() {
         String username = usernameField.getText().trim();
         String password = new String(passwordField.getPassword()).trim();
-
 
         if (username.isEmpty() || password.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please enter both username and password!", "Missing Fields", JOptionPane.WARNING_MESSAGE);
@@ -100,39 +99,6 @@ public class LoginPanel extends JPanel {
     }
 
     private void styleButton(JButton btn, Color bg, Color fg) {
-        btn.setBackground(bg);
-        btn.setForeground(fg);
-        btn.setBorderPainted(false);
-        btn.setFocusPainted(false);
-        btn.setOpaque(true);
-        btn.setPreferredSize(new Dimension(140, 44));
-        btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
-    }
-}
-
-
-  if (username.isEmpty() || password.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Please enter both username and password!", "Missing Fields", JOptionPane.WARNING_MESSAGE);
-        } else if ("admin".equals(username) && "1234".equals(password)) {
-            JOptionPane.showMessageDialog(this, "Login successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
-            mainApp.showPanel("Home");
-        } else {
-            JOptionPane.showMessageDialog(this, "Invalid username or password!", "Authentication Failed", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-
-    private void styleTextField(JTextComponent field) {
-        field.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-        field.setForeground(Color.WHITE);
-        field.setBackground(new Color(30, 30, 30));
-        field.setCaretColor(Color.WHITE);
-        field.setBorder(BorderFactory.createCompoundBorder(
-            BorderFactory.createLineBorder(new Color(51, 51, 51), 1),
-            BorderFactory.createEmptyBorder(10, 12, 10, 12)
-        ));
-    }
-
- private void styleButton(JButton btn, Color bg, Color fg) {
         btn.setBackground(bg);
         btn.setForeground(fg);
         btn.setBorderPainted(false);
