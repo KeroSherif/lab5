@@ -51,7 +51,7 @@ public class UpdateStudentPanel extends JPanel {
         btnUpdate = new JButton("Update Student");
         add(btnUpdate);
 
-        // Load student data
+        
         btnLoad.addActionListener(e -> {
             try {
                 int id = Integer.parseInt(txtId.getText().trim());
@@ -70,7 +70,7 @@ public class UpdateStudentPanel extends JPanel {
             }
         });
 
-        // Update student info
+     
         btnUpdate.addActionListener(e -> {
             try {
                 int id = Integer.parseInt(txtId.getText().trim());
