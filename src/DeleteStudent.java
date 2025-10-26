@@ -1,4 +1,3 @@
-package lab5;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
