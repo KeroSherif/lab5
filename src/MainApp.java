@@ -34,7 +34,7 @@ public class MainApp extends JFrame {
         mainPanel.add(new LoginPanel(this), "Login");
         mainPanel.add(new HomePanel(this), "Home");
         mainPanel.add(new AddStudentPanel(manager), "AddStudent");
-        //mainPanel.add(new ViewStudentsPanel(manager), "ViewStudents");
+        mainPanel.add(new ViewStudentsPanel(manager), "ViewStudentPanel");
         mainPanel.add(new UpdateStudentPanel(manager), "UpdateStudent");
         mainPanel.add(new SearchStudentPanel(manager), "SearchStudent");
 
