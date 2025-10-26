@@ -30,7 +30,7 @@ public class HomePanel extends JPanel {
 
         // التنقل الفعلي للصفحات المطلوبة
         addBtn.addActionListener(e -> mainApp.showPanel("AddStudent"));
-        viewBtn.addActionListener(e -> mainApp.showPanel("ViewStudents"));
+        viewBtn.addActionListener(e -> mainApp.showPanel("View"));
         updateBtn.addActionListener(e -> mainApp.showPanel("UpdateStudent"));
         searchBtn.addActionListener(e -> mainApp.showPanel("SearchStudent"));
 
