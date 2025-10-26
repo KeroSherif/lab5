@@ -36,5 +36,5 @@ public class HomePanel extends JPanel {
         btnPanel.add(logoutBtn);
 
         add(btnPanel, BorderLayout.CENTER);
-    }
+   }
 }
