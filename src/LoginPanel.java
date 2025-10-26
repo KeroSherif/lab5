@@ -5,8 +5,6 @@
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.text.JTextComponent;
-
-
 /**
  *
  * @author DANAH
@@ -30,11 +28,11 @@ public class LoginPanel extends JPanel {
         gbc.gridx = 0; gbc.gridy = 0; gbc.gridwidth = 2;
         add(title, gbc);
 
-        JLabel subtitle = new JLabel("Sign in to continue", SwingConstants.CENTER);
+JLabel subtitle = new JLabel("Sign in to continue", SwingConstants.CENTER);
         subtitle.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         subtitle.setForeground(new Color(176, 176, 176));
         gbc.gridy++;
- add(subtitle, gbc);
+        add(subtitle, gbc);
 
         gbc.gridwidth = 1;
         gbc.gridy++;
@@ -50,7 +48,7 @@ public class LoginPanel extends JPanel {
         gbc.gridx = 1;
         add(usernameField, gbc);
 
- gbc.gridy++;
+gbc.gridy++;
         JLabel passLabel = new JLabel("Password:");
         passLabel.setFont(new Font("Segoe UI", Font.PLAIN, 15));
         passLabel.setForeground(Color.WHITE);
@@ -85,7 +83,7 @@ private void handleLogin() {
         }
     }
 
-  private void styleTextField(JTextComponent field) {
+ private void styleTextField(JTextComponent field) {
         field.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         field.setForeground(Color.WHITE);
         field.setBackground(new Color(30, 30, 30));
