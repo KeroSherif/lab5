@@ -24,7 +24,6 @@ public class ViewStudentPanel extends JPanel {
     private void initComponents() {
         setLayout(new BorderLayout());
 
-        // زرار الرجوع
         JButton backBtn = new JButton("⬅ Back to Home");
         backBtn.setFont(new Font("Segoe UI", Font.PLAIN, 12));
         backBtn.setForeground(Color.WHITE);
